@@ -31,7 +31,7 @@ const AnalyzePage: React.FC = () => {
   const renderTrafficLight = () => {
     if (!data) return null;
 
-    if (data.traffic_jam < 80) {
+    if (data.traffic_jam > 80) {
       return (
         <>
           <img
@@ -46,7 +46,7 @@ const AnalyzePage: React.FC = () => {
           </div>
         </>
       );
-    } else if (data.traffic_not_jam < 80) {
+    } else if (data.traffic_not_jam > 80) {
       return (
         <>
           <img
